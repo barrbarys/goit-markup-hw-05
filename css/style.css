@@ -13,6 +13,7 @@
 	--icon-link: #AFB1B8;
 	--social-link-bgc: rgba(255, 255, 255, 0.1);
 	--icon-black: #000000;
+	--overlay-bgc: rgba(33, 150, 243, 0.9);
 	/* кольори рамок */
 	--header-border-clr: #ECECEC;
 	--portfolio-card-border-clr: #EEEEEE;
@@ -61,9 +62,7 @@
 
 /* modal window */
 .backdrop {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
 	background-color: rgba(0, 0, 0, 0.2);
 	position: fixed;
 	top: 0;
@@ -71,15 +70,6 @@
 	z-index: 1000;
 	width: 100%;
 	height: 100%;
-}
-
-.modal {
-	position: relative;
-	background-color: var(--primary-white);
-	width: 528px;
-	height: 581px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
 }
 
 .modal-btn {
@@ -98,11 +88,32 @@
 	cursor: pointer;
 }
 
+.modal {
+	position: absolute;
+	background-color: var(--primary-white);
+	top: 50%;
+	left: 50%;
+	width: 530px;
+	height: 580px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	opacity: 1;
+	transition: transform 1200ms cubic-bezier(0.4, 0, 0.2, 1) 200ms, opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+	transform: translate(-50%, -50%) scale(1) rotate(0);
+
+}
+
+
 .backdrop.is-hidden {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
 
+}
+
+.backdrop.is-hidden .modal {
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
 }
 
 /* Global styles */
@@ -197,6 +208,9 @@ ul {
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+		max-width: 1600px;
+				margin-left: auto;
+			margin-right: auto;
 
 }
 
@@ -400,6 +414,10 @@ ul {
 /* team-section styles */
 .team {
 	background-color: var(--light-grey-bgc);
+		max-width: 1600px;
+			min-height: 600px;
+			margin-left: auto;
+			margin-right: auto;
 }
 
 .team-title,
@@ -473,18 +491,49 @@ ul {
 
 .portfolio-link {
 	display: block;
+
 	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.overlay-item{
+		position: relative;
+			overflow: hidden;
+}
 /* justify-content: space-between;  робить дирку в разі іншої кількості елементів*/
 .portfolio-link:hover,
 .portfolio-link:focus {
+
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 }
 
-.hover-text {
-	display: none;
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
+	transform: translatey(0);
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	padding: 63px 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--overlay-bgc);
+	position: absolute;
+	left: 0;
+	top: 0;
+	backdrop-filter: blur(1px);
+	transition: transform 500ms ease-in-out;
+	transform: translatey(100%);
+}
+
+
+.overlay-text {
+	color: var(--primary-white);
+	font-size: 18px;
+	letter-spacing: 0.03em;
+	line-height: 1.56;
+	user-select: none;
 }
 
 /* .portfolio-item {
@@ -571,6 +620,9 @@ ul {
 	background-color: var(--dark-background);
 	padding-top: 60px;
 	padding-bottom: 60px;
+		max-width: 1600px;
+			margin-left: auto;
+			margin-right: auto;
 }
 
 .address-link {
