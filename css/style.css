@@ -28,8 +28,8 @@
 
 
 	/* трансформація */
-	
-		--transition: var(--transition);
+
+	--transition: var(--transition);
 }
 
 /* visually-hidden */
@@ -136,9 +136,9 @@ ul {
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
-		max-width: 1600px;
-				margin-left: auto;
-			margin-right: auto;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 
@@ -162,7 +162,7 @@ ul {
 	color: var(--logo-bl);
 }
 
-.page-link{
+.page-link {
 	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
@@ -172,6 +172,7 @@ ul {
 
 
 }
+
 .site-nav {
 	display: flex;
 }
@@ -211,6 +212,7 @@ ul {
 .address-link:focus {
 	color: var(--accent);
 }
+
 .header-current-page {
 	color: var(--accent);
 	position: relative;
@@ -229,6 +231,7 @@ ul {
 	border-radius: 2px;
 	background-color: var(--accent);
 }
+
 /* index-page styles */
 
 
@@ -250,8 +253,9 @@ ul {
 /* hero button */
 .hero-btn:hover,
 .hero-btn:focus {
-		background-color: var(--btn-hover);
+	background-color: var(--btn-hover);
 }
+
 .hero-btn {
 	display: flex;
 	align-items: center;
@@ -371,10 +375,10 @@ ul {
 /* team-section styles */
 .team {
 	background-color: var(--light-grey-bgc);
-		max-width: 1600px;
-			min-height: 600px;
-			margin-left: auto;
-			margin-right: auto;
+	max-width: 1600px;
+	min-height: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .team-title,
@@ -439,6 +443,7 @@ ul {
 .filter-list .item:nth-child(n + 2) {
 	margin-left: 8px;
 }
+
 .filter-btn:hover,
 .filter-btn:focus {
 	background-color: var(--accent);
@@ -453,6 +458,7 @@ ul {
 
 	transition: box-shadow var(--transition);
 }
+
 .portfolio-list .subtitle {
 	margin-top: 0;
 	margin-bottom: 4px;
@@ -477,34 +483,39 @@ ul {
 .portfolio-item {
 	--card-item: 3;
 }
+
 .portfolio-link:hover,
 .portfolio-link:focus {
 
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 }
+
 .subtitle {
 	margin-bottom: 4px;
 }
+
 /* portfolio overlay */
 
 
-.overlay-item{
-		position: relative;
-			overflow: hidden;
+.overlay-item {
+	position: relative;
+	overflow: hidden;
 }
+
 .card-description {
 	border: 1px solid var(--portfolio-card-border-clr);
 	border-top: none;
 	padding: 20px 24px;
 }
+
 /* justify-content: space-between;  робить дирку в разі іншої кількості елементів*/
 
 .overlay {
 	width: 100%;
 	height: 100%;
 	padding: 63px 24px;
-	opacity:0;
+	opacity: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -527,9 +538,9 @@ ul {
 
 
 .portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay{
-	opacity:1;
-	transform:translatey(0); 
+.portfolio-link:focus .overlay {
+	opacity: 1;
+	transform: translatey(0);
 }
 
 /* крайні праві і нижні маржини */
@@ -568,9 +579,9 @@ ul {
 	background-color: var(--dark-background);
 	padding-top: 60px;
 	padding-bottom: 60px;
-		max-width: 1600px;
-			margin-left: auto;
-			margin-right: auto;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .address-link {
